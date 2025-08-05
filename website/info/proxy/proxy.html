@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>Proxy p&aring; IN-maskinen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<h1>Proxy p&aring; IN-maskinen</h1>
+<h2>&nbsp;</h2>
+<h2>Inneh&aring;ll</h2>
+<dl> 
+  <dl> 
+    <dt><font size="+1">SOCKS5 <a href="#proxy">Proxy</a><br>
+      <a href="#setup">Generella</a> inst&auml;llningar<br>
+      Inst&auml;llningar f&ouml;r <a href="#icq">ICQ</a><br>
+      Inst&auml;llningar f&ouml;r <a href="#netscape">Netscape</a></font></dt>
+  </dl>
+  <dl> 
+    <dd><font size="+1"> </font></dd>
+  </dl>
+</dl>
+<hr>
+<h2><a name="proxy"></a>Proxy</h2>
+<p>IN-maskinen har nu en fullt fungerande SOCKS5 proxy-server. En proxy anv&auml;nds 
+  f&ouml;r att l&auml;nka ihop olika n&auml;tverk, t.ex. l&aring;ta trafik passera 
+  en firewall med eller utan adress&ouml;vers&auml;ttning. Man kan &auml;ven anv&auml;nda 
+  en proxy till att surfa anonymt, detta &auml;r dock ingen id&eacute; h&auml;r 
+  eftersom all trafik loggas av netadmin. Program som kr&auml;ver dubbelriktad 
+  kommunikation, t.ex. <a href="#icq">ICQ</a>, AOL IM, IRC etc, har problem att 
+  fungera med adress&ouml;vers&auml;ttaren, genom att anv&auml;nda en proxy kan 
+  dessa fungera felfritt.</p>
+<p>Proxyn kan anv&auml;ndas fritt av alla p&aring; Rotary och Vattentornet, (inga 
+  portar blockerade).<br>
+  Samtliga anv&auml;ndare, interna och externa, kan utnyttja den som <a href="#netscape">HTTP</a> 
+  (WWW) och FTP proxy. Det g&aring;r m.a.o att komma &aring;t interna resurser 
+  utifr&aring;n utan att anv&auml;nda port-forwarding, observera att interna datornamn 
+  inte fungerar utifr&aring;n eftersom dessa inte finns i n&aring;gra externa 
+  DNS'er, (du m&aring;ste anv&auml;nda lokala IP-nummer).</p>
+<p>Proxy'n m&ouml;jligg&ouml;r f&ouml;r externa anv&auml;ndare att komma &aring;t 
+  interna FTP-servers &auml;ven i passive mode. Eftersom FTP-data skickas &ouml;ver 
+  en icke f&ouml;rutbest&auml;md port skulle detta kr&auml;va att proxyn var &ouml;ppen 
+  p&aring; alla portar f&ouml;r externa anv&auml;ndare. Eftersom detta skulle 
+  g&ouml;ra Rotary-n&auml;tet helt &ouml;ppet f&ouml;r omv&auml;rlden &auml;r 
+  denna funktion avst&auml;ngd.<br>
+  H&ouml;r g&auml;rna av er med synpunkter om vad ni tycker om detta!</p>
+<p>Hemsidan f&ouml;r <a href="http://www.socks.nec.com">SOCKS</a>.</p>
+<p>&nbsp;</p>
+<h2><a name="proxy_info"></a>Viktig info ang&aring;ende Proxy'n</h2>
+<p>Vi har haft problem med att folk inte kan ansluta till proxy'n, detta beror 
+  bl.a. p&aring; att en del anv&auml;nder fel timout i t.ex. ICQ och liknande 
+  program och d&auml;rmed avslutas inte tcp-anslutningarna korrekt. Observera 
+  att <i><b>resultatet inte blir b&auml;ttre av att s&auml;tta en l&auml;gre timout</b></i>, 
+  anv&auml;nd v&auml;rdet 15 min (900s) eller eventuellt 10 min (600s). <br>
+  De anv&auml;ndare som upprepade g&aring;nger l&aring;ser upp proxyn genom d&aring;lig 
+  konfiguration kommer att bli underr&auml;ttade per mail. I de fall som vederb&ouml;rande 
+  inte har konto p&aring; IN-maskinen, (d&aring; vet vi inte vilken email personen 
+  har), kommer dennes IP-nr att blockeras p&aring; proxy'n. Om du r&aring;kar 
+  ut f&ouml;r detta s&aring; h&ouml;r av dig per mail f&ouml;r att bli insl&auml;ppt 
+  igen! </p>
+<p>F&ouml;ljande kommando kan anv&auml;ndas, (p&aring; in-maskinen), f&ouml;r 
+  att kolla status p&aring; proxy-uppkopplingarna<br>
+  <b><i> netstat | grep 1080</i></b></p>
+<p>Om du har konfigurerat korrekt s&aring; skall det st&aring; <i><b>ESTABLISHED</b></i> 
+  p&aring; din/dina f&ouml;rbindelser. St&aring;r det n&aring;got som <i><b>TIME_WAIT</b></i>, 
+  <i> <b>FIN_WAIT2</b></i> eller liknande s&aring; anv&auml;nder du fel konfiguration.</p>
+<p>&nbsp; </p>
+<h2><a name="setup"></a>Generella Inst&auml;llningar</h2>
+<h4>Anv&auml;nd f&ouml;ljande inst&auml;llningar f&ouml;r proxyn</h4>
+<p>SOCKS5 proxy<br>
+  Host: in.rotary.studenthem.gu.se, eller interna eller externa IP-numret<br>
+  Port: 1080<br>
+  IP: 193.11.234.4<br>
+  Proxy timeout: 15 min<br>
+</p>
+<p>Anv&auml;ndare p&aring; Rotary och Vattentornet kan anv&auml;nda proxy'n f&ouml;r 
+  all trafik, (inga portar blokerade). &Ouml;vriga interna och externa anv&auml;ndare 
+  kan bara anv&auml;nda proxy'n f&ouml;r <a href="#netscape">HTTP</a> och FTP, 
+  (port 80 och 21).</p>
+<p>&nbsp;</p>
+<h2><a name="icq"></a>Inst&auml;llningar f&ouml;r ICQ</h2>
+<p><b>Denna info &auml;r gammal och g&auml;ller inte sedan alla har riktiga IP-nr. 
+  ICQ fungerar nu utm&auml;rkt med normala inst&auml;llningar utan proxy.</b></p>
+<p>ICQ fungerar inte korrekt p&aring; Rotary-n&auml;tet, bl.a. fungerar inte chat, 
+  fileXfer, voicemail. Det g&aring;r att f&aring; dessa funktioner att fungera 
+  om du initierar dem mot n&aring;gon utanf&ouml;r Rotary-n&auml;tet ellor om 
+  den utomst&aring;ende g&ouml;r f&ouml;ljande <a href="/info/manual.html#icq">inst&auml;llningar</a>. 
+  Dock kvarst&aring;r problemet om b&aring;da sitter p&aring; Rotary-n&auml;tet.</p>
+<p>Genom att anv&auml;nda en proxy-server kan alla dessa problem undanr&ouml;jas. 
+  Observera att om ICQ skall funka inom Rotary-n&auml;tet m&aring;ste b&aring;da 
+  parter anv&auml;nda proxy-servern.<br>
+  Det b&ouml;r se ungef&auml;r likadant ut i AOL Instant Messager, Yahoo Pager 
+  och MSN Messanger. </p>
+<h4>Anv&auml;nd f&ouml;ljande inst&auml;llningar:</h4>
+<ol>
+  <li>G&aring; 'Offline'.</li>
+  <li>G&aring; in i Preferences och ange f&ouml;ljande:<br>
+    <br>
+    <img src="/info/proxy/icq_owner_prefs.jpg" width="453" height="320"> <br>
+    <br>
+  </li>
+  <li>Forts&auml;tt in p&aring; 'Firewall Settings'.<br>
+    <br>
+    <img src="/info/proxy/icq_firewall_settings_1.jpg" width="336" height="329"><br>
+    <br>
+  </li>
+  <li> V&auml;lj SOCKS5 och 15 minuters timeout, 900s.</li>
+  <li> Forts&auml;tt och g&ouml;r f&ouml;ljande inst&auml;llningar:<br>
+    <br>
+    <img src="/info/proxy/icq_firewall_settings_2.jpg" width="336" height="329"><br>
+    <br>
+  </li>
+  <li> Forts&auml;tt, du har nu m&ouml;jlighet att testa inst&auml;llningarna.</li>
+  <li>Klart! G&aring; 'Online'</li>
+</ol>
+<p>&nbsp;</p>
+<h2><a name="netscape"></a>Inst&auml;llningar f&ouml;r Netscape</h2>
+<p>Du kan k&ouml;ra Netscape eller annan browser genom proxyn, p&aring; detta 
+  s&auml;tt kan man komma in p&aring; Rotary-n&auml;tet utifr&aring;n. Observera 
+  att interna datornamn inte fungerar utifr&aring;n eftersom dessa inte finns 
+  i n&aring;gra externa DNS'er. Det g&aring;r &auml;ven att anv&auml;nda proxy'n 
+  f&ouml;r att verka 'anonym', observera att netadmin loggar allt s&aring; du 
+  &auml;r inte helt anonym.</p>
+<h4>S&aring; h&auml;r st&auml;ller du in i Netscape:</h4>
+<p><img src="/info/proxy/netscape_pref.jpg" width="545" height="456"></p>
+<p>&nbsp;</p>
+<p><img src="/info/proxy/netscape_proxy.jpg" width="386" height="397"></p>
+<br>
+Tillbaka till <a href="/main.html">startsidan</a> 
+<hr>
+Sidan skriven av <a href="mailto:josefk@in.rotary.studenthem.gu.se">Daniel 
+  Vindev&aring;g</a><br>
+  <script language="JAVASCRIPT">
+	<!--
+	document.write("Last modified: ")
+	document.write(document.lastModified)
+	//-->
+	</script>
+
+<p>&nbsp; </p>
+</body>
+</html>

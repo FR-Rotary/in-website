@@ -1,0 +1,86 @@
+<html>
+<script language="Javascript">
+          function uptimewindow(){
+              window.open('uptime.shtml', 'window3', 'scrollbars,resizable,Width=690,Height=530,left=' + ( 35) + ',top=' + (35))
+           }
+          function onlinewindow(){
+              window.open('/online.txt', 'window3', 'scrollbars,resizable,Width=380,Height=700,left=' + ( 35) + ',top=' + (35))
+           }
+          function offlinewindow(){
+              window.open('/offline.txt', 'window3', 'scrollbars,resizable=yes,Width=380,Height=700,left=' + ( 35) + ',top=' + (35))
+           }
+			function loginwindow(){
+			  window.open("/info/finger.cgi?@in.rotary.studenthem.gu.se","","resizable,scrollbars,width=700,height=400")
+		}
+</script>
+
+<body bgcolor="#FFFFFF">
+<font face="helvetica, arial"> </font><a name="tjanster"></a> <gh2>Erbjudna tj&auml;nster</gh2>
+<p>
+<ul type="RING">
+  <li>Tillg&aring;ng till shell-konto dvs att du kan k&ouml;ra telnet, ssh, ftp,
+    <a href="/samba/index.html">Samba</a> mm.
+  <li>Mail konto. Du kan forwarda din mail till in-maskinen och h&auml;mta den
+    med imap, pop3 eller webmail.
+  <li>Hemsida.
+</ul>
+<a name="hemsidan"></a><gh2>Tj&auml;nster p&aring; hemsidan</gh2>
+<p>
+<ul type="RING">
+  <!-- li>IMHO <a href="/mail/" target="_top">WebMail</a>. Supports folders, adressbooks,
+    signatures editing of .procmailrc and .forward files. IMHO supports access
+    to multiple IMAP hosts, if you want to access a host that is not listed on
+    the login page, send a request to <a href="mailto:root@in.rotary.studenthem.gu.se">root</a>
+    and we will add it. More <a href="http://www.lysator.liu.se/%7Estewa/IMHO/" target="_top">info</a>.
+    <br -->
+  <li>Vilka &auml;r <a href="javascript:void(window.open('/info/finger.cgi?@in.rot.sgsnet.se','','resizable,scrollbars,width=700,height=400,left='+(35)+',top='+(35)))">inloggade?</a>
+  <li><a href="../ssh/index.html" target="_top">Logga in</a> p&aring; ditt konto
+    via webben, (Java-applet).
+
+  <li>Statistik f&ouml;r <a href="/stats/rinetd/index.html">portforwarding</a>
+    (gammal, fram till 10 juni 2000)
+  <li>Statistik f&ouml;r <a href="/stats/current/">hemsidan</a>
+  <li>Gammal statistik:
+    <a href="/stats/stats-1999/">1999</a>,
+    <a href="/stats/stats-2000/">2000</a>,
+    <a href="/stats/stats-2001/">2001</a>,
+    <a href="/stats/stats-2002/">2002</a>
+    <a href="/stats/stats-2003/">2003</a>
+    <a href="/stats/stats-2004/">2004</a>
+    <a href="/stats/stats-2005/">2005</a>
+
+  <li>Logg-filer finns i <i>/home/in-http/old-logs/</i>
+  <li>IN-maskinens <a href="javascript:void(window.open('uptime.shtml','text_window','resizable,scrollbars,width=690,height=560,left=' + ( 35) + ',top=' + (35)))">
+    uptime</a>.
+  <li>Vilka &auml;r <a href="../online.html"> online</a> p&aring; Rotary och Vattentornet,
+    uppdateras var 30:e minut.
+  <li>Turn on your computer with <a href="/info/wakeup.cgi" target="display">Wake-On-LAN</a>.
+  <li>Textfiler f&ouml;r egna CGI-script <a href="javascript:void(window.open('/online.txt', 'text_window', 'scrollbars,resizable,Width=380,Height=700,left=' + ( 35) + ',top=' + (35)))">online.txt</a>
+		och								 <a href="javascript:void(window.open('/offline.txt', 'text_window', 'scrollbars,resizable=yes,Width=380,Height=700,left=' + ( 35) + ',top=' + (35)))">offline.txt</a>,
+                                         <a href="javascript:void(window.open('/arp.txt', 'text_window', 'scrollbars,resizable=yes,Width=400,Height=700,left=' + ( 35) + ',top=' + (35)))">arp.txt</a>
+    finns i <i>/home/in-http/www</i>/.
+  <li><a href="/news" target="_top">Web interface</a> till <a href="/info/manual.html#news">news-servern</a>.
+  <li><a href="/samba/smb2www.cgi">Web-gateway</a> till Windows-n&auml;tverk
+</ul>
+<p>&nbsp;</p>
+<a name="free"></a><gh2>Fria / &Ouml;ppna tj&auml;nster</gh2>
+<p>
+<ul type="RING">
+  <li><a href="proxy/proxy.html">Proxy-server</a>. Helt &ouml;ppen f&ouml;r alla
+    p&aring; Rotary och Vattentornet.
+  <li><a href="manual.html#smtp">SMTP-server</a>. &Ouml;ppen f&ouml;r alla p&aring;
+    Rotary och Vattentornet.
+  <li><a href="http://in.rotary.studenthem.gu.se/info/manual.html#news">News-server</a>.
+    Lokala grupper, &ouml;ppen f&ouml;r alla
+  <li><a href="/news/" target="_top">Web-gateway</a> till News-servern.
+  <li><a href="/samba/smb2www.cgi">Web-gateway</a> till Windows-n&auml;tverk<br>
+</ul>
+<hr>
+<script language="JAVASCRIPT">
+	<!--
+	document.write("Last modified: ")
+	document.write(document.lastModified)
+	//-->
+	</script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<html>
+<head>
+<title>Manual f&ouml;r IN-maskinen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<h1>Mini-manual f&ouml;r anv&auml;ndning av IN-maskinen och Rotaryn&auml;tet</h1>
+<h2>&nbsp;</h2>
+<h2>Inneh&aring;ll</h2>
+<blockquote>
+  <p><font size="+1" face="Arial, Helvetica, sans-serif">IN-maskinens <a href="#adress">adress</a><br>
+    <a href="#login">Logga</a> in p&aring; shell-konto<br>
+    <a href="#proxy">Proxy</a> p&aring; IN-maskinen<br>
+    Lokal <a href="#news">News-server</a><br>
+    Komma &aring;t ditt <a href="#www">WWW-Konto p&aring;</a> IN-maskinen<br>
+    &Aring;tkomst av din egen dator med <a href="#wfw">Windows-N&auml;tverk</a></font></p>
+  <p><font face="Arial, Helvetica, sans-serif"><a href="info/server_faq.html" target="display"><b>FAQ: 
+    Running your own server.</b></a></font><font size="+1" face="Arial, Helvetica, sans-serif"><a href="#wfw"><br>
+    </a></font></p>
+</blockquote>
+<hr>
+<h2><a name="adress"></a>Adress</h2>
+<p>IN-maskinen's address &auml;r 193.11.234.4</p>
+<p>IN-maskinen har f&ouml;ljande namn:</p>
+<ul>
+  <li>in.rot.sgsnet</li>
+  <li><a href="http://fr.rot.sgsnet.se/">fr.rot.sgsnet.se</a> 
+    (Rotary FR's Hemsida) </li>
+</ul>
+<p>&nbsp;</p>
+<h2><a name="login"></a>Login</h2>
+<p>Du kan logga in med telnet, SSH och ftp. Av s&auml;kerhetsk&auml;l ser vi helst 
+  att ni inte anv&auml;nder telnet. N&auml;r du ans&ouml;ker om konto f&aring;r 
+  du v&auml;lja vilket shell du vill ha. N&auml;r du loggar in f&ouml;rsta g&aring;ngen 
+  skall du &auml;ndra ditt password, detta g&ouml;r du med kommandot<b> <i>passwd</i></b><i>.<br>
+  </i>Om du sitter p&aring; en terminal som inte har SSH kan du logga in via webben 
+  med denna SSH <a href="../ssh/">java-applet</a>. </p>
+<p>For tillf&auml;llet ligger anv&auml;ndarkvoterna p&aring; 5 MB med m&ouml;jlighet 
+  att l&aring;na 50 MB i 7 dagar.</p>
+<p>&nbsp;</p>
+<h2><a name="email"></a>Email</h2>
+<p>Du kan h&auml;mta din post med imap och pop3. Ange IN-maskinen som host och 
+  ditt login/password. </p>
+<p>Dessutom kan du l&auml;sa din post via webben med <a href="/mail/">IMHO</a>.</p>
+<p>Du kan vidarebefodra dina mail till IN-maskinen, f&ouml;rdelen med det &auml;r 
+  att det g&aring;r snabbt att h&auml;mta dem, samt att du undviker problemet 
+  med att vissa institutioner inte till&aring;ter &aring;tkomst av pop3 utifr&aring;n.</p>
+<p>Vidarebefodring av email sker genom att ange emailadressen i filen <i><b>.forward</b></i>. 
+  Om du vill att n&aring;got speciellt skall visas d&aring; n&aring;gon k&ouml;r<b> 
+  <i>finger</i></b> p&aring; dig, skriver du det i filen <i><b>.plan</b></i>. 
+  Det finns &auml;ven ett enkelt script som fixar email forwarding:</p>
+<blockquote>
+  <p><i><b>f_mail &lt;userid&gt; &lt;forward_email_adress&gt;</b></i></p>
+</blockquote>
+<p>B&aring;da filerna ligger i ditt hembibliotek och &auml;r dolda, (f&ouml;rsta 
+  bokstav &auml;r punkt). B&aring;da filerna m&aring;ste vara l&auml;s- och exekverbara 
+  f&ouml;r alla. Detta &auml;ndras med <i><b>chmod a+rx filnamn</b> .</i></p>
+<p>Din email-adress blir <b>ditt_datornamn@in.rotary.studenthem.gu.se</b>. Detta 
+  &auml;r ganska l&aring;ng och obekv&auml;m adress d&auml;rf&ouml;r rekomenderar 
+  vi n&aring;gon gratistj&auml;nst som vidarebefodrar email t.ex.</p>
+<ul>
+  <li><a href="http://www.home.se/">Yahoo</a> gratis webmail, 3 MB limit, nu &auml;ven 
+    pop3 och forwarding. </li>
+  <li><a href="../webmail.netscape.com">Netscape WebMail</a> 5MB limit under @usa.net; 
+    pop3, forwarding och ytterligare 5MB kostar extra.</li>
+  <li><a href="http://www.home.se/">@home.se</a> svensk gratistj&auml;nst erbjuder 
+    pop3, forwarding och enkel webmail.</li>
+  <li><a href="http://easy.to/REMEMBER/">easy.to/remember</a> gratis email och 
+    url-forwarding under hello.to, i.am, hey.to, messages.to.</li>
+  <li><a href="http://www.iname.com/">iName</a> gratis webmail och email-forwarding. 
+    Annan dom&auml;n &auml;n iName.com och pop3 kostar extra.</li>
+  <li><a href="http://www.iname.com/">MyOwnEmail</a> gratis webmail, forwarding 
+    kostar extra. &Ouml;ver 200 dom&auml;ner att v&auml;lja mellan</li>
+</ul>
+<p>Observera att HotMail varken har pop3-&aring;tkomst eller forwarding utan enbart 
+  st&ouml;der webmail. Dussutom &auml;r enda s&auml;ttet att st&auml;nga av ett 
+  HotMail konto att inte logga in p&aring; sex m&aring;nader, m.a.o riskerar du 
+  f&ouml;rlora mail om du vill st&auml;nga det.</p>
+<p>Vill du ha en egen dom&auml;n erbjuder f&ouml;ljande f&ouml;retag bl.a. dns, 
+  pop3, web-hotell, email- och urlforwarding till relativt l&aring;g kostnad:</p>
+<ul>
+  <li><a href="http://domaininfo.com/" target="_top">Domaininfo.com</a> (Regestrerar 
+    ocks&aring;, billigare &auml;n Network Solutions!)</li>
+  <li><a href="http://www.space2u.com/" target="_top">Space2u.com</a></li>
+  <li><a href="http://www.edson.net/" target="_top">Edson Internet</a></li>
+  <li><a href="http://www.nunames.com/" target="_top">nuNames</a></li>
+  <li><a href="http://www.alldomains.com/" target="_top">Alldomains</a></li>
+  <li><a href="http://www.tonga.to/tonga/" target="_top">Tonga</a></li>
+  <li><a href="http://www.netnamesusa.com/" target="_top">NetNames</a></li>
+  <li><a href="http://www.mydomain.com" target="_top">MyDomain</a></li>
+  <li>Yahoo's <a href="http://dir.yahoo.com/Computers_and_Internet/Internet/Domain_Registration/" target="_top">index</a></li>
+</ul>
+<p> Granite Canyon Group, <a href="http://soa.granitecanyon.com/" target="_top">the 
+  Public DNS Service</a> erbjuder gratis prim&auml;r och sekund&auml;r DNS.</p>
+<p>Om du vill ha en egen dom&auml;n kan vi s&auml;tta uppa IN-maskinen att agera 
+  web- och mail-server. Du m&aring;ste dock sj&auml;lv fixa prim&auml;r och sekund&auml;r 
+  DNS, t.ex. via Granite Canyon Group. Observera dock att din dom&auml;n inte 
+  kommer att fungera p&aring; rotary-n&auml;tet utan enbart p&aring; resten av 
+  Interner. Detta beror p&aring; att IN-maskinen har ett lokalt och ett globalt 
+  IP-nr, och det globala inte funkar p&aring; rotary-n&auml;tet.</p>
+<p>&nbsp;</p>
+<h2><a name="smtp"></a>SMTP</h2>
+<p>Du kan anv&auml;nda IN-maskinen som SMTP-server f&ouml;r att skicka email. 
+  Du beh&ouml;ver inte ha konto f&ouml;r att g&ouml;ra det men du m&aring;ste 
+  bo p&aring; Rotary eller Vattentornet, (ditt IP-nr b&ouml;rjar p&aring; 193.11.234 
+  eller 193.11.235 ). Ange bara IN-maskinen som SMTP-host. Detta &auml;r det garanterat 
+  snabbaste s&auml;ttet att skicka email eftersom IN-maskinen ligger p&aring; 
+  det lokala n&auml;tverket.</p>
+<p>&nbsp;</p>
+<h2><a name="proxy"></a>PROXY</h2>
+<p>IN-maskinen k&ouml;r en SOCKS5 <a href="/info/proxy/proxy.html">proxy</a>.</p>
+<p>&nbsp;</p>
+<h2><a name="news"></a>News-server</h2>
+<p>IN-maskinen &auml;r k&ouml;r en news-server med n&aring;gra lokala nyhetsgrupper. 
+  Ingen news-feed sker mot omv&auml;rlden. Tillsvidare &auml;r det m&ouml;jligt 
+  f&ouml;r alla att l&auml;sa/skriva inl&auml;gg. F&ouml;r er utan news-klient 
+  fins nu ett <a href="/news" target="_top">web-interface</a>.</p>
+<p>En lokal news-server &auml;r som en anslagstavla eller klotterplank. f&ouml;rslag 
+  p&aring; fler grupper kan skickas till, (nyhetsgruppen), rotary.in-maskin.</p>
+<p>&nbsp;</p>
+<p><b>Nyhets-grupper</b></p>
+<table width="95%" border="1">
+  <tr> 
+    <td width="29%">rotary.bostad</td>
+    <td width="71%">Bostadsannonser; hyra eller hyra ut, (inte enbart Rotary).</td>
+  </tr>
+  <tr> 
+    <td width="29%">rotary.fr</td>
+    <td width="71%">F&ouml;rtroender&aring;det, kung&ouml;relser och klotterplank</td>
+  </tr>
+  <tr> 
+    <td width="29%">rotary.in-maskin</td>
+    <td width="71%">Fr&aring;gor och diskussioner kring IN-maskinen.</td>
+  </tr>
+  <tr>
+    <td width="29%">rotary.mp3</td>
+    <td width="71%">MP3 relaterat.</td>
+  </tr>
+  <tr> 
+    <td width="29%">rotary.netadmin</td>
+    <td width="71%">Fr&aring;gor och diskussioner ang./till netadmin.</td>
+  </tr>
+  <tr> 
+    <td width="29%">rotary.net-games</td>
+    <td width="71%">Spela n&auml;tverksspel med dina grannar.</td>
+  </tr>
+  <tr> 
+    <td width="29%">rotary.pryltorg</td>
+    <td width="71%">K&ouml;p, byt och s&auml;lj, (men gl&ouml;m inte att betala 
+      moms!).</td>
+  </tr>
+  <tr> 
+    <td width="29%">rotary.puben</td>
+    <td width="71%">H&auml;nder p&aring; Rotary Pub, diskussioner och fr&aring;gor.</td>
+  </tr>
+  <tr> 
+    <td width="29%">rotary.sgs</td>
+    <td width="71%">Justera ventillationen kl 06:00?</td>
+  </tr>
+  <tr> 
+    <td width="29%">rotary.test</td>
+    <td width="71%">Anv&auml;nd denna grupp f&ouml;r tester</td>
+  </tr>
+  <tr> 
+    <td width="29%">rotary.tv-rum</td>
+    <td width="71%">Tillk&auml;nnagivelser om video-visningar, etc i tv-rummet.</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><b>Inst&auml;llningar:<br>
+  </b>NNTP-host: in.rotary.studenthem.gu.se<br>
+  Port: 119</p>
+<p><b>Web-interface:</b><br>
+  <a href="/news/" target="_top">http://in.rotary.studenthem.gu.se/news/</a></p>
+<p>&nbsp;</p>
+<h2></h2>
+<h2><a name="icq"></a>ICQ</h2>
+<p>Nedanst&aring;ende info &auml;r gammal, ICQ funkar klanderfritt d&aring; alla 
+  har riktiga ip-adresser.</p>
+<blockquote>
+<p>Adress&ouml;vers&auml;ttaren ger vissa problem med ICQ. Vissa tj&auml;nster 
+    som startas av n&aring;gon p&aring; andra sidan adress&ouml;vers&auml;ttaren 
+    fungerar inte, t.ex. fileXfer, voicemail, och chat. F&ouml;r att &aring;tg&auml;rda 
+    det g&ouml;r ber du dina ICQ-bekanta g&ouml;ra f&ouml;ljande inst&auml;llning: 
+  </p>
+  <p>Dina ICQ-kontakter skall kryssa f&ouml;r 'Auto Send Through Server' f&ouml;r 
+    dig. Man n&aring;r denna inst&auml;llning genom att klicka p&aring; dig i 
+    kontakt-listan och v&auml;lja /H&ouml;gerklicka p&aring; dig/Alert-Accept-modes/Accept. 
+    Observera att du sj&auml;lv inte skall g&ouml;ra n&aring;gon inst&auml;llning. 
+    Det underl&auml;ttar dessutom om ni b&aring;da k&ouml;r ICQ99b.</p>
+</blockquote>
+
+<p>Du kan ocks&aring; k&ouml;ra den textbaserad klonen, mICQ fr&aring;n IN-maskinen, 
+  bra om man sitter p&aring; en dator n&aring;gon annanstans. Startas med <b><i>micq</i></b> 
+  fr&aring;n kommandoraden. Programmet st&ouml;der ANSI-f&auml;rger. T&auml;nk 
+  p&aring; att det enbart &auml;r m&ouml;jligt att k&ouml;ra en instans av samma 
+  ICQ-konto, (om du samtidigt k&ouml;r ICQ p&aring; din egen dator f&aring;r du 
+  skaffa ett rill ICQ-konto).</p>
+<p>&nbsp;</p>
+<h2><a name="www"></a>WWW-konto</h2>
+<p>Filerna f&ouml;r ditt web-sida l&auml;gger du i katalogen <i><b>public</b></i>. 
+  Katologen och filerna i den m&aring;ste l&auml;s- och exekverbara f&ouml;r alla. 
+  CGI-script &auml;r till&aring;tna samt l&ouml;senordsskyddade bibliotek, (<i><b>.htaccess</b></i>). 
+  Din hemsida f&aring;r adressen:</p>
+<ul>
+  <li>http://in.rotary.studenthem.gu.se/~login_namn</li>
+</ul>
+<p>Om du &ouml;nskar kan vi l&auml;gga in en shortcut s&aring; att du slipper 
+  ~-tecknet, enligt:</p>
+<ul>
+  <li>http://in.rotary.studenthem.gu.se/vad_du_vill</li>
+</ul>
+<p></p>
+<p> H&auml;r kan du fixa en gratis url-forwarding, (enklare adress):</p>
+<ul>
+  <li><a href="http://www.come.to/">http://come.to</a></li>
+  <li><a href="http://easy.to/remember">http://easy.to/remember</a> </li>
+</ul>
+<p>&nbsp;</p>
+<h2><a name="wfw"></a>&Aring;tkomst av Windows-N&auml;tverk</h2>
+<p>Du kan komma &aring;t din Windows-PC med <a href="/samba/index.html">Samba</a>:</p>
+<ul>
+  <li>smbclient //dator_namn/utdelad_mapp <i>password -</i>U<i> <i>anv&auml;ndare</i></i></li>
+</ul>
+<p>Anv&auml;ndar-flaggan &auml;r bara n&ouml;dv&auml;ndig om du k&ouml;r NT. </p>
+<p>Detta program fungerar ungef&auml;r som en ftp-klient, du kan flytta filerna 
+  till och fr&aring;n IN-maskinen, f&ouml;r att flytta dem vidare f&aring; du 
+  sedan anv&auml;nda ftp. Det &auml;r mycket smidigare att s&auml;tta upp port-forwarding 
+  och k&ouml;ra en ftp-server p&aring; din egen dator.</p>
+<p>&nbsp;</p>
+<hr>
+Sidan skriven av <a href="mailto://daniel.vindevag@home.se">Daniel Vindev&aring;g</a><br>
+	<script language="JAVASCRIPT">
+	<!--
+	document.write("Last modified: ")
+	document.write(document.lastModified)
+	//-->
+	</script>
+<p>&nbsp; </p>
+</body>
+</html>
